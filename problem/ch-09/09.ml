@@ -1,3 +1,5 @@
+(* REF: http://pllab.is.ocha.ac.jp/~asai/book/Top.html *)
+
 (* 駅名の情報 (駅名(漢字), 駅名(ひらがな), 駅名(ローマ字), 路線名) を表す型 *)
 type ekimei_t = {
     kanji   : string;
