@@ -9,7 +9,7 @@ type person_t = {
 
 (* 目的: 人名から、血液型を表示する *)
 (* ketsueki_hyoji: person_t -> string *)
-let ketsueki_hyoji name = match name with
+let ketsueki_hyoji person = match person with
     { name = n; height = h; weight = w; birthday = birth; blood_type = blood } -> n ^ "さんの血液型は" ^ blood ^ "型です"
 
 (* テスト *)

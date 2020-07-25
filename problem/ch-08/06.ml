@@ -9,8 +9,8 @@ type ekimei_t = {
 (* 目的: 駅を受け取ると、「路線名、駅名(かな)」 を表示する *)
 (* hyoji: ekimei_t -> string *)
 let hyoji station = match station with
-    {kanji = cc; kana = jc; romaji = r; shozoku = s} ->
-        s ^ "," ^ jc
+    {kanji = kanji; kana = kana; romaji = r; shozoku = s} ->
+        s ^ "," ^ kana
 
 (* テスト *)
 let station1 = {kanji = "尾崎"; kana = "おざき"; romaji = "ozaki"; shozoku = "南海線"}

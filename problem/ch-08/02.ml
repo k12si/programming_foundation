@@ -1,4 +1,4 @@
-(* お小遣い帳の情報 (商品名, 値段, 場所, 日付) を表す型 *)
+(* お小遣い帳の情報を表す型 *)
 type okozukai_t = {
     product_name    :   string;
     price           :   int;
