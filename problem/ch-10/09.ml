@@ -13,13 +13,7 @@ let rec equal_length lst1 lst2 = match (lst1, lst2) with
     | (first1 :: rest1, first2 :: rest2) -> equal_length rest1 rest2 (* equal_length rest1 rest2 *)
 
 (* length を利用した場合の equal_length の定義 *)
-(* let rec equal_length_used_length lst1 lst2 = match (lst1, lst2) with
-    ([], []) -> true
-    | ([], first2 :: rest2) -> false
-    | (first1 :: rest1, []) -> false
-    | (first1 :: rest1, first2 :: rest2) ->
-        if length lst1 = length lst2 then true
-                                     else false *)
+(* let rec equal_length_used_length lst1 lst2 = length lst1 = length lst2 *)
 
 
 (* ------ テスト  ------ *)

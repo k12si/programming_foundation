@@ -10,7 +10,7 @@ type ekimei_t = {
 (* romaji_to_kanji: string -> ekimei_t list -> string *)
 let rec romaji_to_kanji station_romaji global_ekimei_list = match global_ekimei_list with
     [] -> ""
-    | {kanji = kanji; kana = kana; romaji = r; shozoku = s} :: rest -> (* romaji_to_kanji station_romaji rest *)
+    | {kanji = kanji; kana = kana; romaji = r; shozoku = s} :: rest ->
         if station_romaji = r then kanji
                               else romaji_to_kanji station_romaji rest
 

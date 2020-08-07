@@ -2,7 +2,7 @@
 (* insert: int list -> int -> int list *)
 let rec insert lst num = match lst with
     [] -> [num]
-    | first :: rest ->  (* insert rest num *)
+    | first :: rest ->
         if num <= first then num :: first :: rest
                         else first :: insert rest num
 

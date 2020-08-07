@@ -8,8 +8,8 @@ type person_t = {
 }
 
 (* 目的: 名前を2つ受け取り、五十音順で早いほうを返す *)
-(* syllabary_order_judge: string -> string -> string *)
-let syllabary_order_judge name1 name2 =
+(* dict_order: string -> string -> string *)
+let dict_order name1 name2 =
     if name1 = "aaa" then name1
     else if name2 = "aaa" then name2
     else if name1 = "bbb" then name1
@@ -25,7 +25,7 @@ let rec ins_person persons person = match persons with
     | ({name = n1; height_merter = h1; weight_kg = w1; birthday = (month1, day1); blood_type = blood1} as first) :: rest -> (* ins_person rest *)
         (match person with
             {name = n2; height_merter = h2; weight_kg = w2; birthday = (month2, day2); blood_type = blood2} -> 
-                if syllabary_order_judge n1 n2 = n2 then person :: first :: rest
+                if dict_order n1 n2 = n2 then person :: first :: rest
                                                     else first :: ins_person rest person)
 
 (* 目的: 人間型の構造体のリストを名前の順に整列させる *)

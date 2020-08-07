@@ -7,7 +7,7 @@ type gakusei_t = {
 
 (* 目的: 点数順に並んだ学生リスト中に、任意の学生を点数を元に適切な箇所に挿入する *)
 (* ins_gakusei: gakusei_t list -> gakusei_t -> gakusei_t list *)
-let rec ins_gakusei studens gakusei = match studens with
+let rec ins_gakusei students gakusei = match students with
     [] -> [gakusei]
     | ({name = n1; tensuu = t1; seiseki = s1} as first) :: rest -> (* ins_gakusei rest *)
         (match gakusei with
@@ -19,7 +19,7 @@ let rec ins_gakusei studens gakusei = match studens with
 (* gakusei_sort: gakusei_t list -> gakusei_t list *)
 let rec gakusei_sort students = match students with
     [] -> []
-    | ({name = n; tensuu = t; seiseki = s} as first) :: rest -> (* gakusei_sort rest *)
+    | ({name = n; tensuu = t; seiseki = s} as first) :: rest ->
         ins_gakusei (gakusei_sort rest) first
 
 

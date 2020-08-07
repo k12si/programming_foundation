@@ -21,13 +21,13 @@ let rec ketsueki_shukei persons = match persons with
 
 (* ------ 例 ------ *)
 (* person_t *)
-let person1 = {name = "aaa"; height_merter = 1.65; weight_kg = 50.3; blood_type = "A"; birthday = (7, 19)}
-let person2 = {name = "bbb"; height_merter = 1.55; weight_kg = 51.3; blood_type = "B"; birthday = (7, 18)}
-let person3 = {name = "ccc"; height_merter = 1.45; weight_kg = 52.3; blood_type = "O"; birthday = (7, 17)}
-let person4 = {name = "ddd"; height_merter = 1.45; weight_kg = 52.3; blood_type = "O"; birthday = (7, 17)}
+let person_a = {name = "aaa"; height_merter = 1.65; weight_kg = 50.3; blood_type = "A"; birthday = (7, 19)}
+let person_b = {name = "bbb"; height_merter = 1.55; weight_kg = 51.3; blood_type = "B"; birthday = (7, 18)}
+let person_o = {name = "ccc"; height_merter = 1.45; weight_kg = 52.3; blood_type = "O"; birthday = (7, 17)}
+let person_o' = {name = "ddd"; height_merter = 1.45; weight_kg = 52.3; blood_type = "O"; birthday = (7, 17)}
 
 (* person_t list *)
-let persons1 = [person3; person2; person1; person4]
+let persons1 = [person_o; person_b; person_a; person_o']
 
 
 (* ------ テスト ------ *)
