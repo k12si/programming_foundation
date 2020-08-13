@@ -20,7 +20,7 @@ let rec make_eki_list global_ekimei_list = match global_ekimei_list with
 let rec shokika eki_list start_station = match eki_list with
     [] -> []
     | ({name = n; saitan_kyori = s; temae_list = t} as first) :: rest ->
-        if start_station = n then {name = n; saitan_kyori = 0.; temae_list = [n]} :: rest
+        if start_station = n then {name = n; saitan_kyori = 0.; temae_list = [n]} :: shokika rest start_station
                              else first :: shokika rest start_station
 
 
