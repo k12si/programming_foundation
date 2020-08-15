@@ -16,8 +16,8 @@ let koushin1 done_station undone_station =
     match done_station with {name = dn; saitan_kyori_km = ds; path = dp} ->
         match undone_station with {name = un; saitan_kyori_km = us; path = up} ->
             let distance = get_ekikan_kyori dn un global_ekikan_list in
-                if distance = infinity || distance > us then undone_station
-                                                        else {name = un; saitan_kyori_km = distance; path = List.append dp [un]}
+                if distance = infinity || distance +. ds > us then undone_station
+                                                             else {name = un; saitan_kyori_km = distance; path = List.append dp [un]}
 
 
 (* --- test --- *)
