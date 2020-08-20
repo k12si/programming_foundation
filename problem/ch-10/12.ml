@@ -1,4 +1,5 @@
 (* 駅名の情報 (駅名(漢字), 駅名(ひらがな), 駅名(ローマ字), 路線名) を表す型 *)
+(*  
 type ekimei_t = {
     kanji   : string;
     kana    : string;
@@ -45,6 +46,7 @@ let global_ekikan_list = [
     {kiten="日比谷"; shuten="二重橋前"; keiyu="千代田線"; kyori=0.7; jikan=1}; 
     {kiten="二重橋前"; shuten="大手町"; keiyu="千代田線"; kyori=0.7; jikan=1} 
 ]
+*)
 
 
 (* 目的: ローマ字の駅名を漢字表記に変換する *)
@@ -78,8 +80,10 @@ let kyori_wo_hyoji station_romaji1 station_romaji2 =
 
 
 (* ------ テスト ------ *)
+(*  
 let test1 = kyori_wo_hyoji "" "" = "という駅は存在しません"
 let test2 = kyori_wo_hyoji "ozaki" "yoyogikouen" = "ozakiという駅は存在しません"
 let test3 = kyori_wo_hyoji "hibiya" "yoyogikouen" = "日比谷駅と代々木公園駅はつながっていません"
 let test4 = kyori_wo_hyoji "akasaka" "kokkaigijidoumae" = "赤坂駅から国会議事堂前駅までは0.8kmです"
 let test5 = kyori_wo_hyoji "kokkaigijidoumae" "akasaka" = "国会議事堂前駅から赤坂駅までは0.8kmです"
+*)

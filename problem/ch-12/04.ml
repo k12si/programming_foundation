@@ -1,4 +1,4 @@
-# use "./../ch-09/09.ml"
+(* # use "./../ch-09/09.ml" *)
 
 
 (* 目的: 駅名を受け取り、かな順に整列した駅名リスト中の適切な部分に挿入する. *)
@@ -20,4 +20,4 @@ let rec seiretsu global_ekimei_list = match global_ekimei_list with
 
 
 (* --- test --- *)
-let test1 = seiretsu global_ekimei_list
+(* let test1 = seiretsu global_ekimei_list *)

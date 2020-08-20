@@ -25,7 +25,6 @@ let global_ekimei_list = [
     {kanji="赤坂"; kana="あかさか"; romaji="akasaka"; shozoku="千代田線"} 
 ]
 
-
 (* ------ テスト ------ *)
 let test1 = romaji_to_kanji "" global_ekimei_list = ""
 let test2 = romaji_to_kanji "ozaki" global_ekimei_list = ""
