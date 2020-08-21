@@ -6,7 +6,7 @@
 let rec make_eki_list global_ekimei_list = match global_ekimei_list with
     [] -> []
     | {kanji = kanji; kana = kana; romaji = r; shozoku = s} :: rest -> 
-        {name = kanji; saitan_kyori = infinity; temae_list = []} :: make_eki_list rest
+        {name = kanji; saitan_kyori_km = infinity; path = []} :: make_eki_list rest
 
 
 (* --- test --- *)
