@@ -22,10 +22,12 @@ let rec rm_start_station start_station_name eki_list = match eki_list with
 (* 目的: 直前に確定した駅 (eki_t型) と未確定の駅のリストを受け取り、更新処理後の未確定の駅リストを返す *)
 (* koushin: eki_t -> eki_t list -> eki_t list *)
 let koushin done_station v = 
-    List.map ((fun done_station undone_station ->
+    List.map
+        ((fun done_station undone_station ->
                 let distance = get_ekikan_kyori done_station.name undone_station.name global_ekikan_list in
                     if distance = infinity || distance +. done_station.saitan_kyori_km > undone_station.saitan_kyori_km then undone_station
-                                                                                                                        else {name = undone_station.name; saitan_kyori_km = distance; path = List.append done_station.path [undone_station.name]}) done_station) v
+                                                                                                                        else {name = undone_station.name; saitan_kyori_km = distance; path = List.append done_station.path [undone_station.name]}) done_station)
+        v
 
 
 (* --- test --- *)
