@@ -2,10 +2,11 @@
 (* fold_left: ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a *)
 let rec fold_left f init lst = match lst with
     [] -> init
-    | first :: rest -> f (fold_left f init rest) first
+    | first :: rest -> fold_left f (f init first) rest
 
 
 (* --- test --- *)
 let test1 = fold_left (+) 5 [1; 2; 3; 4] = 15 
 let test2 = fold_left (-) 5 [1; 2; 3; 4] = -5 
 let test3 = fold_left ( * ) 5 [1; 2; 3; 4] = 120 
+let test4 = fold_left (^) "" ["春";"夏";"秋";"冬"]

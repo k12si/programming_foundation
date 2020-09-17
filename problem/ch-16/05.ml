@@ -2,6 +2,7 @@
 # use "./../ch-10/12.ml"
 # use "./../ch-12/03.ml"
 # use "./../ch-12/04.ml"
+# use "./../ch-14/12.ml"
 # use "./../ch-15/05_livecording.ml"
 # use "./../ch-16/03.ml"
 # use "./../ch-16/04.ml"
@@ -12,7 +13,7 @@ let dijkstra start_station_romaji end_station_romaji =
     let ekimei_lst = seiretsu global_ekimei_list
     in let start_station_kanji = romaji_to_kanji start_station_romaji ekimei_lst
     in let end_station_kanji = romaji_to_kanji end_station_romaji ekimei_lst
-    in let make_initial_eki_list = shokika (make_eki_list ekimei_lst) start_station_kanji
+    in let make_initial_eki_list = make_initial_eki_list ekimei_lst start_station_kanji
     in let u = dijkstra_main make_initial_eki_list global_ekikan_list
     in let rec recur u =
         match u with

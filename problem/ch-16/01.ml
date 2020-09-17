@@ -4,7 +4,9 @@ let sum_list lst =
     (* sum はリストの合計値 *)
     let rec iter lst sum = match lst with
         [] -> []
-        | first :: rest -> first + sum :: iter rest (first + sum)
+        | first :: rest ->
+            let current_sum = first + sum
+            in current_sum :: iter rest current_sum
     in iter lst 0
 
 (* --- test --- *)
